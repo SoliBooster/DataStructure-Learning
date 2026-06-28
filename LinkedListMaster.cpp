@@ -34,7 +34,7 @@ struct Node{    //struct Node:定义一个链表结构体
 
 //创建一个简单的链表：1 -> 2 -> 3 -> nullptr
 Node* createLinkedList(){
-    Node* head = new Node(1);               //创建头结=节点，存储1
+    Node* head = new Node(1);               //创建头结节点，存储1
     head -> next = new Node(2);             //头节点的next指向第二个节点，存储2
     head -> next -> next = new Node(3);     //第二个节点的next指向第三个节点，存储3
     return head;                            //返回头节点
@@ -57,7 +57,6 @@ void insertAtTail(Node* head, int x){
         return;
     }
 
-    
     Node* current = head;
     while(current->next != nullptr){        //遍历到最后一个节点
         current = current->next;
